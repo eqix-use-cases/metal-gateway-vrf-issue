@@ -1,0 +1,32 @@
+project_id = ""
+
+metal_cluster = {
+  "amsterdam1" = {
+    plan             = "m3.small.x86"
+    metro            = "am"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+    network_type     = "hybrid-bonded"
+    port_name        = "bond0"
+    ip               = "192.168.105.101"
+    netmask          = "255.255.255.0"
+  },
+  "amsterdam2" = {
+    plan             = "m3.small.x86"
+    metro            = "am"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+    network_type     = "hybrid-bonded"
+    port_name        = "bond0"
+    ip               = "192.168.105.102"
+    netmask          = "255.255.255.0"    
+  }
+}
+
+vxlan = 1005
+metal_asn = 65100
+ip_ranges = ["169.254.31.0/24","169.254.32.0/24","192.168.105.0/24"]
+ip_block_type = "vrf"
+ip_block = "192.168.105.0"
+ip_block_cidr = 24
+
